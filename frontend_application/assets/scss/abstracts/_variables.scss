@@ -1,0 +1,67 @@
+// Colors
+$gallo-primary: #94c11f;
+$gallo-secondary: #df8600;
+$gallo-dark: #333333;
+$gallo-light: #ebebeb;
+$gallo-hover: #4e660a;
+
+$image-cover-lighter: rgba(0, 0, 0, 0.45);
+$image-cover055: rgba(0, 0, 0, 0.55);
+
+$theme-colors: (
+    'primary': $gallo-primary,
+    'secondary': $gallo-secondary,
+    'dark': $gallo-dark,
+    'light': $gallo-light
+);
+
+$body-bg: $gallo-light;
+$body-color: black;
+
+// Fonts
+$font-family-sans-serif: "Open Sans", sans-serif;
+$font-size-base: 1.5rem;
+$line-height-base: 1.6;
+
+$headings-font-family: "Montserrat", "Open Sans", sans-serif;
+$headings-font-weight: 700;
+$h1-font-size: 4.5rem;
+$h2-font-size: 2.6rem;
+$h3-font-size: 1.8rem;
+$h4-font-size: 1.4rem;
+$headings-margin-bottom: 15px;
+
+// Links
+$link-color: black;
+$link-hover-color: black;
+
+// Buttons
+$btn-font-family: "Montserrat", "Open Sans", sans-serif;
+$btn-font-size: 1.6rem;
+
+
+// Grid breakpoints
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 700px,
+    lg: 1000px,
+    xl: 1300px
+);
+
+$container-max-widths: (
+  sm: 650px,
+  md: 660px,
+  lg: 930px,
+  xl: 1140px
+);
+
+// Navbar
+$navbar-dark-color: white;
+$navbar-nav-link-padding-x: 15px;
+
+// Collapse
+$transition-collapse:         height 0s;
+
+// Modals
+$modal-inner-padding: 2.5rem;

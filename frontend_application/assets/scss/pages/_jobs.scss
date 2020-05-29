@@ -1,0 +1,14 @@
+.confirm-message {
+    text-align: center;
+    font-family: $headings-font-family;
+    font-weight: $headings-font-weight;
+    font-size: 3rem;
+    margin-top: 60px;
+}
+.back-btn-container {
+    padding: 20px 35px;
+    position: absolute;
+    div {
+        padding: 0;
+    }
+}
