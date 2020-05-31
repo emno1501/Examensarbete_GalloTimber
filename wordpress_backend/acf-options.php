@@ -1,5 +1,5 @@
 <?php
-
+// Kod skapad av Daniel Philström på Cybercom Sundsvall
 // Add a custom options page to associate ACF fields with
 if ( function_exists( 'acf_add_options_page' ) ) {
     acf_add_options_page( [

@@ -1,4 +1,6 @@
 <?php
+// Kod skapad av Daniel Pihlström på Cybercom Sundsvall.
+// Parametrar i labels är ändrade av mig (Emma Norgren)
 class Vacancy {
     const CPT            = 'jobs';
     public function __construct() {
