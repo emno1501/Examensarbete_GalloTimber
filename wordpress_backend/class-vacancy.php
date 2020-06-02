@@ -1,6 +1,7 @@
 <?php
 // Kod skapad av Daniel Pihlström på Cybercom Sundsvall.
 // Parametrar i labels är ändrade av mig (Emma Norgren)
+// Show_in_rest-inställningen tillagt av Emma Norgren.
 class Vacancy {
     const CPT            = 'jobs';
     public function __construct() {

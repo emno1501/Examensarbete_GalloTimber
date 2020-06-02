@@ -4,7 +4,7 @@
     fluid
     id="top"
     role="main">
-        <b-row class="contentPageHeader">
+        <b-row class="contentPageHeader"> <!-- Headerbakgrund -->
             <b-col class="content-header-image">
                 <div>
                     <img 
@@ -16,12 +16,12 @@
             </b-col>
         </b-row>
         <template v-if="pageData.length > 0" >
-        <b-row>
+        <b-row> <!-- Sidans huvudrubrik -->
             <h1 v-if="pageData[0].title.rendered" v-html="pageData[0].title.rendered"/>
         </b-row>
-        <template v-if="pageData[0].template == 'template-contact-us.php'">
+        <template v-if="pageData[0].template == 'template-contact-us.php'"> <!-- Innehåll för kontaktsidan -->
             <b-row class="wide-text-content" v-if="pageData[0].contact_meta">
-                <b-col class="small-boxes-container tight-md">
+                <b-col class="small-boxes-container tight-md"> <!-- Kontaktkanaler -->
                     <div
                     v-for="contact in pageData[0].contact_meta"
                     v-bind:key="contact.titel"
@@ -36,7 +36,7 @@
             </b-row>
             <b-row class="wide-text-content dark-background">
                 <b-col>
-                    <b-row class="small-boxes-container">
+                    <b-row class="small-boxes-container"> <!-- Kontaktpersoner på företaget -->
                         <b-col 
                         v-for="employee in pageData[0].employees"
                         v-bind:key="employee.namn"
@@ -52,16 +52,18 @@
                     </b-row>
                 </b-col>
             </b-row>
-            <b-row>
+            <b-row> <!-- Google maps -->
                 <iframe :src="pageData[0].google_maps" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" title="Google maps"></iframe>
             </b-row>
         </template>
 
         <template v-else>
+            <!-- Innehåll för sida om lediga tjänster -->
             <b-row v-if="pageData[0].template == 'template-jobs.php'" class="content">
                 <p v-if="pageData[0].content.rendered" v-html="pageData[0].content.rendered"/>
                 <h2>Lediga tjänster</h2>
-                <BigButton
+                <!-- Lediga tjänster listas -->
+                <BigButton 
                 v-for="job in jobData"
                 :key="job.id"
                 :route = "'/jobb/' + job.id">
@@ -113,7 +115,7 @@
                     class="wide-button">
                         Skicka
                     </PrimaryButton>
-                    <ConfirmationModal id="my-modal">
+                    <ConfirmationModal id="my-modal"> <!-- Pop up med bekräftelsealternativ -->
                         Bekräfta genomförande av spontanansökan
                         <div>
                             <SecondaryButton @back="$bvModal.hide('my-modal')" class="cancel-btn">Avbryt</SecondaryButton>
@@ -123,7 +125,7 @@
                 </b-form>
             </b-row>
 
-            <b-row class="content" v-else>
+            <b-row class="content" v-else> <!-- Övriga undersidor -->
                 <b-col v-if="pageData[0].kort_fakta">
                     <b-row>
                         <h2 v-if="pageData[0].kort_fakta.rubrik" v-html="pageData[0].kort_fakta.rubrik"/>

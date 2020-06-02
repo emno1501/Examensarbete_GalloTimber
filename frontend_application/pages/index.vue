@@ -74,8 +74,8 @@
         <b-row class="startContact"> <!--Kontaktsektion-->
             <b-col>
                 <h2>Kontakta oss</h2>
-                <b-row v-if="contactData.length > 0"> <!--Kontaktinfo-->
-                <template v-if="contactData[0].employees">
+                <b-row v-if="contactData.length > 0">
+                <template v-if="contactData[0].employees"> <!-- Kontaktperson -->
                     <b-col
                     class="contactPerson"
                     cols="12" md="9">
@@ -95,7 +95,7 @@
                         </b-row>
                     </b-col>
                 </template>
-                <template v-if="contactData[0].contact_meta">
+                <template v-if="contactData[0].contact_meta"> <!-- Allmäna kontaktuppgifter -->
                     <b-col class="generalContact text-center text-md-left" cols="12" md="3">
                         <div class="float-md-right">
                             <h3><span/><br/>{{ contactData[0].contact_meta.epost.titel }} & {{ contactData[0].contact_meta.telefon.titel }}</h3>

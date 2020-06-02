@@ -4,7 +4,7 @@
     fluid 
     id="top">
         <b-row class="contentPageHeader">
-            <b-col class="content-header-image">
+            <b-col class="content-header-image"> <!-- Headerbakgrund -->
                 <div>
                     <img 
                     v-if="headerImage"
@@ -14,25 +14,26 @@
                 <div class="imageCover"></div>
             </b-col>
         </b-row>
-        <b-row class="back-btn-container">
+        <b-row class="back-btn-container"> <!-- Tillbaka-knapp -->
             <b-col cols="12">
                 <SecondaryButton v-on:back="sendBack">Tillbaka</SecondaryButton>
             </b-col>
         </b-row>
-        <template v-if="message != ''">
+        <template v-if="message != ''"> <!-- Bekräftelsemeddelande vid jobbansökning -->
             <p class="confirm-message">{{ message }}</p>
         </template>
         <template v-else>
             <template v-if="jobData">
-            <b-row>
+            <b-row> <!-- Jobbannons-rubrik -->
                 <h1 v-if="jobData.title.rendered" v-html="jobData.title.rendered"/>
             </b-row>
             <b-row class="content">
-                <b-col cols="12">
+                <b-col cols="12"> <!-- Jobbeskrivning -->
                     <p v-if="jobData.content.rendered" v-html="jobData.content.rendered"/>
                 </b-col>
                 <b-col cols="12">
                     <h3>Sök tjänsten</h3>
+                    <!-- Ansökningsformulär -->
                     <b-form @submit="onSubmit">
                         <b-form-group id="input-group-1" label="Namn *" label-for="input-1">
                             <NeuTextInput
@@ -75,7 +76,7 @@
                         class="wide-button">
                             Skicka
                         </PrimaryButton>
-                        <ConfirmationModal id="my-modal">
+                        <ConfirmationModal id="my-modal"> <!-- Pop up för bekräftelse av ansökan -->
                             Bekräfta ansökan av tjänsten: <span v-html="jobData.title.rendered" />
                             <div>
                                 <SecondaryButton @back="$bvModal.hide('my-modal')" class="cancel-btn">Avbryt</SecondaryButton>

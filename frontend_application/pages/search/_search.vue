@@ -1,7 +1,7 @@
 <template>
     <b-container class="contentContainer" fluid id="top" role="main">
         <b-row class="contentPageHeader">
-            <b-col class="content-header-image">
+            <b-col class="content-header-image"> <!-- Headerbakgrund -->
                 <div>
                     <img 
                     v-if="headerImage"
@@ -15,7 +15,7 @@
             <h1>Sökning</h1>
         </b-row>
         <template v-if="pageData.length > 0">
-            <b-row class="content">
+            <b-row class="content"> <!-- Listning av sökresultat -->
                 <b-col  
                 cols="12"
                 v-for="data in pageData"
@@ -37,7 +37,7 @@
         <template v-else>
             <b-row class="content">
                 <b-col  
-                cols="12">
+                cols="12"> <!-- Box för felmeddelande -->
                     <h2 class="text-center">{{ message }}</h2>
                 </b-col>
             </b-row>
